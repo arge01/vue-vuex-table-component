@@ -31,8 +31,8 @@
                 if (item.status === 'banned') return 'table-banned';
             },
             deleted(data) {
-                const index = this.items.findIndex(item => item.key === data.index) 
-                this.items.splice(index, 1)
+                const index = this.items.findIndex(item => item.key === data.index);
+                this.items.splice(index, 1);
             }
         }
     }
