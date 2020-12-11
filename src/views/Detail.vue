@@ -38,7 +38,8 @@
             margin: 5px 0;
 
             pre {
-                margin: 0
+                margin: 0;
+                overflow-x: auto;
             }
         }
     }
