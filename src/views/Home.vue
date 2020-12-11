@@ -1,9 +1,6 @@
 <template>
 	<section class="container home">
-		<data-table
-			title="Faturalar"
-			:columns="columns" 
-			:rows="rows"/>
+		<data-table title="Faturalar"/>
 	</section>
 </template>
 
@@ -12,6 +9,10 @@
 
 	export default {
 		name: "Home",
+		created() {
+			this.$store.dispatch("initColumnApp", this.columns); // this.columns => backend olmadığı için el ile girdiğimiz data.
+			this.$store.dispatch("initRowsApp", this.rows); // this.rows => backend olmadığı için el ile girdiğimiz data.
+		},
 		data() {
 			return {
 				columns: [
@@ -91,7 +92,7 @@
 		},
 		components: {
 			DataTable,
-		},
+		}
 	};
 </script>
 

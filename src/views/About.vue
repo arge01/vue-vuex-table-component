@@ -8,11 +8,11 @@
 				<li>1. Component yapısı ile bootstrap Data Table</li>
 				<li><b>2. Kırılımlar</b>:
 					<ul>
-						<li>2.1. Tarih</li>
-						<li>2.2. Fatura No</li>
-						<li>2.3. Tutar</li>
-						<li>2.4. Kara Beyaz Liste</li>
-						<li>2.5. Sil İşlemi</li>
+						<li>2.1. Tarih <i>Date Format</i></li>
+						<li>2.2. Fatura No <i>Number Format</i></li>
+						<li>2.3. Tutar <i>Price Format</i></li>
+						<li>2.4. Kara Beyaz Liste <i>Boolean Format</i></li>
+						<li>2.5. Sil İşlemi <i>Action Format</i></li>
 					</ul>
 				</li>
 			</ul>
@@ -22,9 +22,10 @@
     		<h4 class="title">Kullanılan Kütüphaneler</h4>
 			<ul>
 				<li>1. Router vue</li>
-				<li>2. Bootstrap vue</li>
-				<li>3. Font Awesome vue</li>
-				<li>4. State manegemnt vue</li>
+				<li>2. Bootstrap css</li>
+				<li>3. Bootstrap vue</li>
+				<li>4. Font Awesome vue</li>
+				<li>5. State manegemnt vuex</li>
 			</ul>
     	</div>
   	</div>
@@ -40,6 +41,14 @@
 			ul {
 				list-style-type: none;
 				text-align: left;
+
+				li {
+					i {
+						font-size: 7pt;
+						background: #e9e9e9;
+						padding: 3px 5px;
+					}
+				}
 			}
 		}
 

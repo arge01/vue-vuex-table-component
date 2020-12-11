@@ -1,14 +1,27 @@
 <template>
 	<div id="app">
 		<div id="nav">
-			<router-link to="/">Anasayfa</router-link> |
-			<router-link to="/about">Hakkında</router-link> |
-			<router-link to="/detail">Detaylar</router-link>
+			<router-link v-for="(route, key) in router" :key="key" :to="route.path">{{route.text}}</router-link>
 		</div>
 
 		<router-view />
 	</div>
 </template>
+
+<script>
+	import { routes } from './router'
+
+	export default {
+		data() {
+			return {
+				router: routes,
+			}
+		},
+		components: {
+			routes,
+		}
+	}
+</script>
 
 <style lang="scss">
 	#app {
@@ -31,6 +44,18 @@
 			color: #2c3e50;
 			font-size: 9pt;
 			margin: 0 5px;
+
+			&:after {
+				content: "|";
+				margin-left: 15px;
+				font-size: 1.3em;
+				color: #d1d1d1;
+				font-weight: lighter;
+			}
+
+			&:last-child:after{
+				display: none;
+			}
 
 			&:hover,
 			&.router-link-exact-active {
