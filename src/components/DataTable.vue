@@ -32,8 +32,7 @@
             },
             deleted(data) {
                 const index = this.items.findIndex(item => item.key === data.index) 
-                if (~index)
-                    this.items.splice(index, 1)
+                this.items.splice(index, 1)
             }
         }
     }
