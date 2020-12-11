@@ -4,7 +4,7 @@
         <div class="data-table">
             <b-table responsive striped hover :items="items" :fields="fields" :tbody-tr-class="rowClass">
                 <template #cell(action)=data>
-                    <b-button @click="deleted(data)" size="sm">Sil</b-button>
+                    <b-button @click="deleted(data)" size="sm"><font-awesome-icon icon="trash"/></b-button>
                 </template>
             </b-table>
         </div>
@@ -66,7 +66,7 @@
             .btn {
                 padding: 0 15px;
                 border: none;
-                background: #6da5a4;
+                background: transparent;
             }
 
             .table-banned {
