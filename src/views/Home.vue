@@ -95,6 +95,7 @@
 </script>
 
 <style scoped lang="scss">
+	body {overflow-x: hidden}
 	.home {
 		font-size: 9pt
 	}

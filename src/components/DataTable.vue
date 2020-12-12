@@ -11,7 +11,6 @@
 			<tbody>
 				<tr v-for="(row, key) in getRows" :key="key" :id="'row-'+key">
 					<th v-for="column in getColumns" :key="column.key + '-' + key">
-						{{modify(row, column)}}
 						<template>
 							<b-button v-if="column.key === 'action'" @click="deleted(row)" size="sm"><font-awesome-icon icon="trash"/></b-button>
 						</template>
@@ -21,6 +20,8 @@
 								<span class="slider round"></span>
 							</label>
 						</template>
+						{{modify(row, column)}}
+						<div v-if="column.key === 'banned'" class="banned">{{row[column.key] ? "Beyaz Listede" : "Kara Listede"}}</div>
 					</th>
 				</tr>
 			</tbody>
@@ -34,8 +35,7 @@
 </template>
 
 <script>
-	import Vue from 'vue'
-
+	import Vue from 'vue';
 	export default {
 		name: "DataTable",
 		computed: {
@@ -128,6 +128,7 @@
 	.data-table {
 		padding: 15px;
 		background: #cdddd5;
+		overflow-x: auto;
 
 		.table {
 			width: 100%;
