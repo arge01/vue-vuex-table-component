@@ -18,28 +18,36 @@ const getters = {
 
 const mutations = {
     initColumnData(state, column) {
-        state.data.column = column;
+        return state.data.column = column;
     },
     initRowsData(state, rows) {
-        state.data.rows = rows;
+        return state.data.rows = rows;
     },
     updateData(state, data) {
-
+        const index = state.data.rows.findIndex(f => f.key === data.key);
+        if ( index > -1 )
+            state.data.rows[index] = data;
     },
-    deleteData(state, dataID) {
-
+    deleteData(state, data) {
+        const index = state.data.rows.findIndex(f => f.key === data.key);
+        if ( index > -1 )
+            state.data.rows.splice(index, 1);
     }
 }
 
 const actions = {
     initColumnApp(context, column) {
-        context.commit("initColumnData", column);
+        return context.commit("initColumnData", column);
     },
     initRowsApp(context, rows) {
-        context.commit("initRowsData", rows);
+        return context.commit("initRowsData", rows);
     },
-    update() {},
-    delete() {},
+    updateApp(context, data) {
+        return context.commit("updateData", data);
+    },
+    deleteApp(context, data) {
+        return context.commit("deleteData", data);
+    },
 }
 
 const store = new Vuex.Store({

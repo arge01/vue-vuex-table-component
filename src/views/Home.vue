@@ -70,22 +70,20 @@
 					{
 						key: 0, 
 						date: "24 Kasım 1989", 
-						fatura_no: "15678", 
+						fatura_no: 1567, 
 						name: "Arif GEVENCİ", 
-						total: "12,70 ₺", 
-						banned: "Beyaz Liste",
+						total: 12.70, 
+						banned: true,
 						action: "1",
-						status: ""
 					},
 					{
 						key: 1, 
 						date: "12 Ocak 1989", 
-						fatura_no: "32434", 
+						fatura_no: 32434, 
 						name: "Ali VELİ", 
-						total: "452,90 ₺", 
-						banned: "Kara Liste",
+						total: 452.90, 
+						banned: false,
 						action: "2",
-						status: "banned"
 					}
 				],
 			};
