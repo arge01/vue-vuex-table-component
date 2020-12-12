@@ -53,7 +53,7 @@
 					},
 					{
 						key: "banned", 
-						label: "Kara, Beyaz Liste", 
+						label: "Durum", 
 						filter: false, 
 						sortable: true,
 						format: "boolean"
