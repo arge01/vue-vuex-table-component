@@ -1,4 +1,4 @@
-# challenge-vue-table-component
+# vue-table-component
 
 ## Project setup
 ```
